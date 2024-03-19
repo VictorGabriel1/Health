@@ -115,7 +115,13 @@ fun Scan(navController: NavController, modifier: Modifier = Modifier) {
                     fontSize = 4.em,
                     textAlign = TextAlign.Center
                 )
-                Button(onClick = { biometricPrompt.authenticate(promptInfo) }) {
+                Button(onClick = {
+                    if(canAuthenticateWithBiometrics) {
+                        biometricPrompt.authenticate(promptInfo)
+                    } else {
+                        navController.navigate("patient")
+                    }
+                }) {
                     Text(
                         text = "Escanear biometria",
                         fontSize = 5.em
