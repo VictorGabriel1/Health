@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.servicesclub"
+    namespace = "com.example.health"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.servicesclub"
+        applicationId = "com.example.health"
         minSdk = 31
         targetSdk = 34
         versionCode = 1
